@@ -8,7 +8,32 @@ Neural network architectures are very critical in determining optimal model perf
 * PyTorch 1.13+
 * TorchVision 0.14+
 
+
+
+
+
 ## Results
+### CIFAR-10
+
+| Model | Error (%) | Params (M) |
+|-------|-----------|------------|
+| RNASNet-WS + Cutout | 2.78 | 2.5 |  
+| NAONet-WS + Cutout | 2.93 | 2.5 |
+| DARTS + Cutout | 2.83 | 4.6 |
+| AmoebaNet-B + Cutout | 2.13 | 34.9 |
+
+The architecture discovered by RNASNet-WS resulted in a competitive error rate of 2.78% on CIFAR-10, outperforming previous neural architecture search methods like ENAS, PNAS, DARTS, while being over 10x more parameter efficient than AmoebaNet-B.
+
+### CINIC-10 
+
+| Model | Top-1 Acc (%) | Params (M) |
+|-------|----------------|------------|
+| RNASNet-WS + Cutout  | 91.48 | 2.5 |
+| NAONet-WS + Cutout | 90.83 | 2.5 |  
+| NAT-M4 | 94.8 | 9.1 |
+
+On the transfer task of CINIC-10, RNASNet-WS achieved 91.48% top-1 accuracy, outperforming NAONet-WS and being competitive with NAT models that were directly trained on CINIC-10.
+
 ### Penn Treebank
 
 | Model | Test Perplexity | 
