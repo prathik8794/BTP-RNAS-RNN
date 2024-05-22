@@ -8,10 +8,6 @@ Neural network architectures are very critical in determining optimal model perf
 * PyTorch 1.13+
 * TorchVision 0.14+
 
-
-
-
-
 ## Results
 ### CIFAR-10
 
@@ -41,6 +37,11 @@ On the transfer task of CINIC-10, RNASNet-WS achieved 91.48% top-1 accuracy, out
 | RNASNet-WS | 57.5 |
 | NAONet-WS | 56.6 |
 | DARTS | 56.1 |
+
+The architecture discovered by RNAS is: 
+```
+0 2 1 2 2 1 3 3 4 1 2 0 3 2 2 1 6 2 7 1 6 0
+```
 
 On the Penn Treebank language modeling task, the RNN architecture discovered by RNASNet-WS achieved a test perplexity of 57.5, surpassing various neural architecture search methods like ENAS and being on par with state-of-the-art results.
 
